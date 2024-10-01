@@ -1,0 +1,6 @@
+li.pasta::first-line {
+    color: rgb(0, 11, 96); 
+    font-size: x-large;
+    font-style: oblique;
+    background-color: khaki;
+}
