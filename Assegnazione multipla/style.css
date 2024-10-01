@@ -1,0 +1,11 @@
+h2,
+h3,
+h4,
+p {
+    color: fuchsia;
+    font-weight: lighter;
+    font-stretch: expanded;
+    font-style: oblique;
+    text-align: center;
+
+}
