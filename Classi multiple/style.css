@@ -1,4 +1,21 @@
 .text {
-    color: steelblue; font-size: 40px; font-style: oblique; font-weight: bold; background-color: lightpink;
-    border-radius: 50%; border-style: dashed; 
+    color: steelblue;
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: bold;
+    background-color: lightpink;
+    border-radius: 50%;
+    border-style: dashed;
+}
+
+.paragraph {
+    color: chocolate;
+    font-family: cursive;
+    font-size: larger;
+}
+
+.information {
+    color: navy;
+    text-align: justify;
+    font-weight: lighter;
 }
