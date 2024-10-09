@@ -1,0 +1,6 @@
+li {
+    display: inline-block;
+    color: brown;
+    font-weight: bold;
+    padding-inline: 10px;
+}
