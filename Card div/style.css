@@ -1,0 +1,45 @@
+.card {
+    box-shadow: 0 4px 8px 0 peachpuff;
+    transition: 0.3s;
+    width: 25%;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 5px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 palevioletred;
+}
+
+.container {
+    padding: 4px 16px;
+    
+}
+
+h4 {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.x {
+    border: 2px solid black;
+    border: hidden;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    left: 90%;
+    bottom: 448px;
+    font-size: 30px;
+    color: rgb(54, 25, 25);
+
+}
