@@ -1,0 +1,7 @@
+.quadrato {
+    border: 2px solid darkred;
+    background-color: lightpink;
+    width: 250px;
+    height: 250px;
+    float: inline-end;
+}
