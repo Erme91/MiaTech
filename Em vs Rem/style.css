@@ -1,0 +1,11 @@
+.text {
+    font-size: 12px;
+}
+
+.text__1 {
+    font-size: 7rem;
+}
+
+.text__2 {
+    font-size: 7em;
+}
