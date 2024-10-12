@@ -1,0 +1,10 @@
+.columns {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: 2px solid black;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    color: navy;
+    background-color: pink;
+
+}
