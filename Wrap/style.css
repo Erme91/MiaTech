@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    background-color: aqua;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 100px;
+
+}
