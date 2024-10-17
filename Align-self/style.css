@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    
+    
+}
+
+.container > div {
+    border: 3px solid green;
+    margin: 5px;
+    width: fit-content;
+    height: 30px;
+}
+
+.container__1 {
+    align-self: center;
+
+}
+
+.container__3 {
+    align-self: flex-end;
+
+}
