@@ -6,4 +6,9 @@
     width: 300px;
     height: 100px;
 
+    .container__1 {
+        border: 1px solid black;
+        margin: 2px;
+    }
+
 }
