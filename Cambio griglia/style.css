@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    border: 2px solid darkblue;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    background-color: rgb(206, 255, 196);
+    gap: 20px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+div {
+    border: 1px solid black;
+
+}
+
+.child-8 {
+    grid-column: span 2;
+}
+
+
+
+    
+
+
+
+
