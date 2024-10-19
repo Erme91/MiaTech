@@ -1,0 +1,10 @@
+body {
+    background-color: brown;
+}
+
+@media only screen and (max-widht: 768px) {
+
+    body {
+        background-color: blue;
+    }
+}
