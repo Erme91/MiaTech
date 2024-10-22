@@ -1,0 +1,11 @@
+.container.full-width {
+  width: 100%;
+}
+.container p {
+  color: blue;
+}
+.container p:first-child {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=esempio.css.map */
