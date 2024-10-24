@@ -1,0 +1,49 @@
+$primary-width: 90%;
+$secondary-width: calc(90% / 3);
+
+.container-navbar {
+    background-color: #e7e7e7;
+    border: 2px solid #333333;
+
+    .container-navbar-menu {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 30% 12% 12% 12% 12%;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: lightpink;
+
+
+        .menu:hover {
+            color: #ff0000;
+        }
+
+        .voices {
+            font-size: 18px;
+        }
+
+        .voices-last {
+            @extend .container-navbar
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        padding-top: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .main-top {
+            width: $secondary-width;
+            background-color: burlywood;
+            padding-right: 8px;
+        }
+
+        .main-bottom {
+            width: $primary-width;
+            background-color: deepskyblue;
+        }
+    }
+
+}
