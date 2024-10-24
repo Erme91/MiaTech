@@ -1,0 +1,18 @@
+.container-navbar {
+  width: 100%;
+  border: 2px solid darkblue;
+  background-color: beige;
+}
+.container-navbar .container-navbar-menu {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 12% 12% 12% 12%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container-navbar .container-navbar-menu .menu:hover {
+  color: #ff0000;
+}
+.container-navbar .container-navbar-menu .voices {
+  font-size: 18px;
+}/*# sourceMappingURL=navbar.css.map */
