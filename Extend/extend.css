@@ -1,0 +1,18 @@
+.container-navbar, .container-navbar .container-navbar-menu .voices-last {
+  background-color: #e7e7e7;
+  border: 2px solid #333333;
+}
+.container-navbar .container-navbar-menu, .container-navbar .container-navbar-menu .voices-last .container-navbar-menu {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 12% 12% 12% 12%;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: lightpink;
+}
+.container-navbar .container-navbar-menu .menu:hover {
+  color: #ff0000;
+}
+.container-navbar .container-navbar-menu .voices {
+  font-size: 18px;
+}/*# sourceMappingURL=extend.css.map */
