@@ -1,0 +1,19 @@
+$first-font-color: #4B0082;
+$second-font-color: #FF4500;
+$third-font-color: #808000;
+$first-bg-color: #FFEFD5;
+$second-bg-color: #F5F5F5;
+
+.voices {
+    color: $third-font-color;
+}
+
+.main-top {
+    background-color: $first-bg-color;
+    color: $first-font-color;
+}
+
+.main-bottom {
+    background-color: $second-bg-color;
+    color: $second-font-color;
+}
