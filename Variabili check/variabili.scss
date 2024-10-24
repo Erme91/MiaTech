@@ -1,0 +1,27 @@
+$primary-color: #C71585;
+$secondary-color: #00FF7F;
+$secondary-size: 25px;
+$other-bg: #E0FFFF;
+
+.container-navbar {
+    width: 100%;
+    border: 2px solid darkblue;
+    background-color: $other-bg;
+
+    .container-navbar-menu {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 30% 12% 12% 12% 12%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .menu:hover {
+            color: $primary-color;
+        }
+
+        .voices {
+            color: $secondary-color;
+            font-size: $secondary-size;
+        }
+    }
+}
