@@ -1,0 +1,45 @@
+@mixin light-theme () {
+    background-color: beige;
+}
+
+@mixin dark-theme () {
+    background-color: #000000;
+    color: white;
+    .voices:hover {
+        color: yellow;
+    }
+
+}
+
+.container-navbar {
+    width: 100%;
+    border: 2px solid darkblue;
+    background-color: beige;
+
+    .container-navbar-menu-light {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 30% 12% 12% 12% 12%;
+        padding-left: 30px;
+        padding-right: 30px;
+        @include light-theme;
+
+        .menu:hover {
+            color: #ff0000;
+        }
+
+        .voices {
+            font-size: 18px;
+        }
+    }
+
+    .container-navbar-menu-dark {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 30% 12% 12% 12% 12%;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 2px solid darkblue;
+        @include dark-theme;
+    }
+}
