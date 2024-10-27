@@ -1,0 +1,56 @@
+$bg-primary: mistyrose;
+$bg-secondary: maroon;
+
+@for $i from 0 through 1 {
+    .main-1 #{$i} {
+        background-color: lighten($bg-primary)
+    }
+}
+
+@for $i from 1 through 2 { 
+    .main-2 #{$i} {
+        background-color: darken($bg-secondary)
+    }
+}
+
+.container-navbar {
+    background-color: #e7e7e7;
+    border: 2px solid #333333;
+
+    .container-navbar-menu {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 30% 12% 12% 12% 12%;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: lightpink;
+
+        .menu:hover {
+            color: #ff0000;
+        }
+
+        .voices {
+            font-size: 18px;
+        }
+
+    }
+         
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        padding-top: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .main-1_1 {
+            width: 50%;
+            padding-right: 8px;
+        }
+
+        .main-2_2 {
+            width: 50%;
+        }
+    }
+
+}
