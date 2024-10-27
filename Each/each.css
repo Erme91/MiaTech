@@ -1,0 +1,79 @@
+.home-pink {
+  color: pink;
+}
+
+.blog-pink {
+  color: pink;
+}
+
+.about-pink {
+  color: pink;
+}
+
+.contact-pink {
+  color: pink;
+}
+
+.home-brown {
+  color: brown;
+}
+
+.blog-brown {
+  color: brown;
+}
+
+.about-brown {
+  color: brown;
+}
+
+.contact-brown {
+  color: brown;
+}
+
+.home-darkgreen {
+  color: darkgreen;
+}
+
+.blog-darkgreen {
+  color: darkgreen;
+}
+
+.about-darkgreen {
+  color: darkgreen;
+}
+
+.contact-darkgreen {
+  color: darkgreen;
+}
+
+.home-blue {
+  color: blue;
+}
+
+.blog-blue {
+  color: blue;
+}
+
+.about-blue {
+  color: blue;
+}
+
+.contact-blue {
+  color: blue;
+}
+
+.container-navbar {
+  width: 100%;
+  border: 2px solid darkblue;
+  background-color: beige;
+}
+.container-navbar .container-navbar-menu {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 12% 12% 12% 12%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container-navbar .container-navbar-menu .menu:hover {
+  color: #ff0000;
+}/*# sourceMappingURL=each.css.map */
