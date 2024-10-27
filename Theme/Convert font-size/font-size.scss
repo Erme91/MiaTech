@@ -1,7 +1,11 @@
-$font-size: 18px;
+$base-font: 18px;
 
-@function em ($new-font: $font-size) {
-    @return ($new-font) * 1;
+@function em($pixels, $font: $base-font) {
+    @return ($pixels / $font) * 1em;
+}
+
+.voices {
+    font-size: em(36px);
 }
 
 .container-navbar {
@@ -18,10 +22,6 @@ $font-size: 18px;
 
         .menu:hover {
             color: #ff0000;
-        }
-
-        .voices {
-            font-size: em(18px);
         }
     }
 }
