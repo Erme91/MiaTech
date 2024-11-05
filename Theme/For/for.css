@@ -1,0 +1,44 @@
+.main .main-1:nth-child(1) {
+  background-color: #4cb771;
+}
+
+.main .main-1:nth-child(2) {
+  background-color: #3b955a;
+}
+
+.main .main-1:nth-child(3) {
+  background-color: #2d7044;
+}
+
+.container-navbar {
+  background-color: #e7e7e7;
+  border: 2px solid #333333;
+}
+.container-navbar .container-navbar-menu {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 12% 12% 12% 12%;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: lightpink;
+}
+.container-navbar .container-navbar-menu .menu:hover {
+  color: #ff0000;
+}
+.container-navbar .container-navbar-menu .voices {
+  font-size: 18px;
+}
+.container-navbar .main {
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.container-navbar .main .main-1_1 {
+  width: 50%;
+  padding-right: 8px;
+}
+.container-navbar .main .main-2_2 {
+  width: 50%;
+}/*# sourceMappingURL=for.css.map */
