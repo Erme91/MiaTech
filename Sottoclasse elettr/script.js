@@ -2,16 +2,22 @@ class Automobile {
     marca = ""
     modello = ""
     anno = ""
+
+    constructor(marca, modello, anno) {
+        this.marca = marca
+        this.modello = modello
+        this.anno = anno
+    }
 }
+
+let lancia = new Automobile("Lancia Y", "GPL Eco-Chic", "2015"); 
 
 class Elettrica extends Automobile {
     autonomia = ""
 
     constructor(marca, modello, anno, autonomia){
-        this.marca = marca
-        this.modello = modello
-        this.anno = anno
-        this.autonomia = autonomia
+        super(marca, modello, anno);
+        this.autonomia = autonomia;
     }
 }
 
@@ -24,6 +30,10 @@ Elettrica.ricarica = function(){
         }
     }
 }
+
+let vettura = new Elettrica("Lancia Y", "GPL Eco-Chic", "2015", 100);
+
+console.log(vettura)
 
 const ric = Elettrica.ricarica()
 console.log(ric.increment() + 200)
