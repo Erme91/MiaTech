@@ -8,7 +8,7 @@ function reverseString(str){
     return reversed
 }
 
-const str = "Buonasera a tutti"
+const str = "Salve"
 const reversed = reverseString(str)
 
 console.log(reversed)

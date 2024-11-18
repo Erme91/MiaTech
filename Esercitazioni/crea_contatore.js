@@ -1,18 +1,16 @@
 function creaContatore(){
-    let count = 20;
+    let count = 0;
 
-    return{
-        increment: function(){
-            count++
-            return count
-        }
+    return function(){
+        count += 1
+        return count
     }
 }
 
-const obj = creaContatore()
+const increment = creaContatore()
 
-console.log(obj.increment())
-console.log(obj.increment())
-console.log(obj.increment())
-console.log(obj.increment())
-console.log(obj.increment())
+console.log(increment())
+console.log(increment())
+console.log(increment())
+console.log(increment())
+console.log(increment())

@@ -1,10 +1,10 @@
 function isPari(n){
 
-    if (n % 2 == 0){
-        console.log("true");
+    if (parseInt(n) % 2 == 0){
+        return true;
     }else {
-        console.log("false");
+        return false;
     }
 }
 
-isPari(17)
+console.log(isPari(30))

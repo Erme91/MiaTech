@@ -25,4 +25,4 @@ function giornoSettimana(day) {
     }
 }
 
-giornoSettimana (4)
+giornoSettimana(7)

@@ -8,5 +8,5 @@ function sommaNumeri(n){
     return somma
 }
 
-const risultato = sommaNumeri(12)
+const risultato = sommaNumeri(5)
 console.log(risultato)

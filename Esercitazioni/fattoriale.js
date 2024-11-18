@@ -8,5 +8,5 @@ function fattoriale(n){
     return result
 }
 
-const n = 6
+const n = 3
 console.log(fattoriale(n))
