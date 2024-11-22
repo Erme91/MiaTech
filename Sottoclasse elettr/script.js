@@ -1,39 +1,60 @@
 class Automobile {
-    marca = ""
-    modello = ""
-    anno = ""
 
-    constructor(marca, modello, anno) {
+    marca = "";
+    modello = "";
+    anno = 0;
+    chilometraggio = 0;
+    
+    constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca
         this.modello = modello
         this.anno = anno
-    }
-}
+        this.chilometraggio = chilometraggio
+    };
 
-let lancia = new Automobile("Lancia Y", "GPL Eco-Chic", "2015"); 
+    descrizione(){
+        return this.marca + "" + this.modello + "" + this.anno + "" + this.chilometraggio + "km";
+    };
+
+    aggiungiChilometri(km) {
+       return this.chilometraggio = this.chilometraggio + km
+    };
+
+    mostraChilometraggio() {
+        return this.chilometraggio + "km"
+    };
+};
 
 class Elettrica extends Automobile {
-    autonomia = ""
+    autonomia = 0;
 
-    constructor(marca, modello, anno, autonomia){
-        super(marca, modello, anno);
+    constructor(marca, modello, anno, chilometraggio, autonomia){
+        super(marca, modello, anno, chilometraggio);
         this.autonomia = autonomia;
     }
-}
 
-Elettrica.ricarica = function(){
-    let km = 100;
-    return {
-        increment: function(){
-            km++;
-            return km
-        }
+    descrizioneElettrica(){
+        return super.descrizione + this.autonomia + "km";
     }
-}
 
-let vettura = new Elettrica("Lancia Y", "GPL Eco-Chic", "2015", 100);
+    ricarica(km) {
+        this.autonomia += km;
+        return this.autonomia
+    };
+};
 
-console.log(vettura)
+let auto1 = new Automobile("Lancia", "GPL", 2015, 30000);
 
-const ric = Elettrica.ricarica()
-console.log(ric.increment() + 200)
+console.log(auto1.descrizione());
+      
+auto1.aggiungiChilometri(100);
+
+console.log(auto1.descrizione());
+
+console.log(auto1.mostraChilometraggio());
+
+let vettura = new Elettrica("Lancia", "GPL", 2015, 30000, 1000);
+
+console.log(vettura);
+
+console.log('La vettura è stata ricaricata. Adesso ha autonomia di:' + vettura.ricarica(300) + 'km')
