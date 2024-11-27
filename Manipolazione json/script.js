@@ -1,17 +1,30 @@
-let people = '{"leader": "Josh", "vice": "Hermann", "employee": "Nick", "helper": "Carl"}';
+let people = `[
+   {  "nome": "Josh",
+      "età": 35,
+      "città": "London"
+   },
+   {
+      "nome": "Delphine",
+      "età": 56,
+      "città": "Marseille"
+   },
+   {
+      "nome": "Hermann",
+      "età": 28,
+      "città": "Stuttgart"
+  }
+]`;
 
 let newPeople = JSON.parse(people);
 
-console.log(newPeople);
-
-let people2 = {
-   employee: "Nick",
-   helper: "Carl",
-   intern: "Lionel",
-   leader: "Josh",
-   vice: "Hermann",
+let newPersona = {
+   "nome": "Uthman",
+   "età": 40,
+   "città": "Istanbul"
 };
 
-let addedPeople = JSON.stringify(people2);
+newPeople.push(newPersona);
+
+let addedPeople = JSON.stringify(newPeople);
 
 console.log(addedPeople)
