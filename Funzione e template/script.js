@@ -1,9 +1,14 @@
-function persona() {
-    let persona = "Licia";
-    let lavoro = "Croazia";
-    return `Il suo nome è ${persona} e lavora in ${lavoro}`;
+function persona(dati) {
+    let {nome, lavoro} = dati;
+    return `Il suo nome è ${nome} e lavora in ${lavoro}`;
 };
 
-const objPerson = persona
-console.log(objPerson())
+const objPerson = {
+    nome: "Lidia",
+    lavoro: "Croazia"
+};
+
+const stringa = persona(objPerson);
+
+console.log(stringa)
 
