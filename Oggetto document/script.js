@@ -1,0 +1,1 @@
+console.log("Il DOM della seguente pagina è:", document)
