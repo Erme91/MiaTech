@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        firstColor: "#a0522d",
+                        secondColor: "#fa8072",
+                        thirdColor: "#ffefd5",
+                        fourthColor: "#cd5c5c"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <div class="container mx-auto border-box h-auto w-60 border-1">
+        <h2 class="font-extrabold bg-thirdColor p-2 text-center border-fourthColor border-2">Le carte siciliane</h2>
+        <p class="bg-secondColor p-1 font-medium border-fourthColor border-2">Il mazzo siciliano conta 40 carte, 10 per ciascuno dei quattro semi: denari (o 'aremi', in dialetto siciliano), bastoni (o 'mazzi'), spade e coppe.</p>
+        <img class="object-fill border-firstColor border-2" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Carte_da_gioco_siciliane_-_spade.jpg">
+    </div>
+</body>
+</html>
