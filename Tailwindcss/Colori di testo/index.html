@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        firstColor: "#483d8b", //darkslateblue
+                        secondColor: "#8b008b", //darkmagenta
+                        thirdColor: "#008b8b", //darkcyan
+                        fourthColor: "#696969", //dimgray
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <h2 class="font-bold text-2xl text-firstColor underline italic">Doll's House</h2>
+    <p class="text-xl text-fourthColor italic">La casa delle bambole, nel campo del modellismo, è un manufatto che riproduce nei minimi particolari un'abitazione in miniatura. Di solito è aperta su una o più pareti: in tal modo è possibile visionarne gli interni.</p>
+    <p class="text-xl text-thirdColor italic">Le riproduzioni in miniatura vedono la loro comparsa occasionale ai tempi degli antichi greci e romani, ma la loro vera e propria affermazione si ha nella metà del XVI secolo, in Germania.
+        Questa moda si diffuse rapidamente anche nei Paesi Bassi, nel XVII secolo, ed in seguito in Inghilterra e Stati Uniti (XVIII secolo).
+    </p>
+    <span class="text-xl text-secondColor italic">Di seguito un link dove visionare queste piccole opere d'arte:</span>
+    <a class="hover:text-indigo-500 text-xl italic underline" href="https://www.casedellebambole.com/">CaseDelleBambole</a>
+</body>
+</html>
