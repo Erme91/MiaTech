@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        firstColor: "#faf0e6",
+                        secondColor: "#cd5c5c",
+                        thirdColor: "#dc143c",
+                        fourthColor: "#f5f5f5",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <div class="container border-black border-2 radious bg-pink-100 border-box w-60 p-4">
+        <button class="border-lime-700 bg-firstColor border-2 p-2 m-2 font-bold">Inserisci</button>
+        <button class="border-fuchsia-950 bg-secondColor border-2 p-2 m-2 text-orange-200 font-bold">Cliccami</button>
+        <button class="border-pink-950 bg-fourthColor border-2 p-2 m-2 font-bold">Procedi</button>
+        <button class="border-rose-300 bg-thirdColor border-2 p-2 m-2 text-orange-100 font-bold">Cancella</button>
+    </div>
+</body>
+</html>
