@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'media',
+        theme: {
+            extend: {
+                colors: {
+                    firstColor: "#8B4513", //saddlebrown
+                    secondColor: "#483D8B", //darkslateblue
+                    thirdColor: "#DDA0DD", //plum
+                    fourthColor: "#FFEFD5", //papayawhip
+                },
+            },
+        },
+    }
+</script>
+<body>
+    <div class="bg-yellow-200 border-1 border-slate-800 p-2 rounded border-dotted h-48 w-60 dark:bg-secondColor">
+        <h2 class="text-center font-bold text-black p-2 dark:text-fourthColor">Il Piccolo Principe</h2>
+        <p class="text-center font-medium text-black italic dark:text-thirdColor">“Mi domando, – disse, – se le stelle sono illuminate perché ognuno possa un giorno trovare la sua”.</p>
+    </div>
+</body>
+</html>
