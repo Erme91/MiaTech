@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#E6E6FA", //lavander
+                    secondary: "#800080", //purple          
+                },
+            },
+        },
+    }
+</script>
+<body>
+    <div class="bg-pink-100 dark:bg-secondary"> 
+        <h2 class="font-extrabold italic text-black dark:text-primary p-4">I Book nook</h2>
+        <p class="font-medium italic text-black dark:text-primary p-4">Il termine “book nook” si traduce letteralmente in “nicchia del libro” (o in senso più figurato come “angolo dei libri”), e consiste in una scena tridimensionale da inserire tra i volumi. Sono un piccolo mondo in miniatura (spesso da costruire, pezzo dopo pezzo) che si apre nella nostra libreria</p>
+    </div>
+    <div class="p-4">
+        <button id="darkModeToggle" class="border-2 rounded border-red-900">Change:<span id="darkModeStatus" class="p-2">Light</span></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
