@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#ffebcd", 
+                        secondary: "#00008b",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <div class="bg-white dark:bg-secondary border-2 border-black radious p-2 h-48 w-44 container mx-auto">
+        <h2 class="text-black dark:text-primary font-extrabold underline">I colori cambiano all'attivazione della "Dark Mode"?</h2><br>
+        <p class="text-black dark:text-primary font-bold">Certamente, e questo ne è proprio l'esempio!</p>
+    </div>
+</body>
+</html>
