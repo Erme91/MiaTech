@@ -69,10 +69,10 @@ console.log(auto1.descrizione());
 console.log(auto1.aggiungiChilometri(25000));
 console.log(auto1.aggiungiChilometri(30000));
 
-console.log(`Il chilometraggio attuale è di: ${auto1.chilometraggioAttuale} km.`);
+console.log(`Il chilometraggio attuale è di: ${auto1.chilometraggioAttuale} km.`)
 
 auto1.chilometraggioAttuale = 130000;
-console.log(`Il nuovo chilometraggio è di ${auto1.chilometraggioAttuale} km`);
+console.log(`Il nuovo chilometraggio è di ${auto1.chilometraggioAttuale} km`)
 
 auto1.chilometraggioAttuale = 40000;
 console.log(auto1.chilometraggioAttuale)
