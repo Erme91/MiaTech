@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        first: "#7CFC00",
+                        second: "#66CDAA",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn {
+                border: black solid 1px;
+                padding: 10px 40px;
+            }
+
+            .card {
+                @apply p-2 bg-blue-100 text-center text-second text-3xl border-2 mx-48
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="p-4">
+        <button class="btn bg-first">Clicca qui</button>
+    </div>
+    <div class="p-4">
+        <div class="card">Presentazione</div>
+    </div>
+</body>
+</html>
