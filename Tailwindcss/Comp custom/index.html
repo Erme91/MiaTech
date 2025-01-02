@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#fffa75",
+                        secondary: "#FFE4B5",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .h2 {
+                color: rgb(91, 16, 160);
+                text-align: center;
+                font-size: x-large;
+                font-style: italic;
+                border: red solid 2px;
+                margin: 8px 400px;
+            }
+
+            .p {
+                color:rgb(21, 16, 160); 
+                font-size: larger;
+                border: yellow solid 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="p-4">
+        <h2 class="h2 p-2 bg-primary">Torta di mele</h2>
+        <p class="p bg-secondary">Le mele da sempre sono protagoniste indiscusse dei dolci casalinghi, come questa 
+            intramontabile torta di mele, golosa, soffice e aromatica, è il miglior comfort food che si possa 
+            desiderare!</p>
+    </div>
+</body>
+</html>
