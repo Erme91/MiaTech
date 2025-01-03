@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="p-6 max-w-6xl mx-auto text-center">
+        <h1 class="text-2xl font-bold mb-6">Elementi visibili o nascosti?</h1>
+        <div class="grid gap-4">
+            <div class="bg-blue-600 text-white p-4 rounded">
+                Elemento sempre visibile!
+            </div>
+            <div class="bg-green-600 text-white p-4 rounded hidden md:block">
+                Elemento visibile SOLTANTO su schermi medi o più grandi!
+            </div>
+            <div class="bg-yellow-500 text-black p-4 rounded md:hidden italic">
+                Elemento visibile SOLTANTO su schermi piccoli!
+            </div>
+            <div class="bg-red-600 text-white p-4 rounded hidden lg:block">
+                Elemento visibile SOLTANTO su schermi grandi o ancora più grandi!
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
