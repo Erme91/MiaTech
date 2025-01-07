@@ -1,15 +1,11 @@
-import { Component } from "react";
+import HelloWorld from "./components/HelloWorld";
 
-class HelloWorld extends Component {
-
-  text = "Hello to everyone!";
-  render () {
-    return (
-      <>
-        <p>{this.text}</p>
-      </>
-    )
-  }
+function App() {
+  return (
+    <>
+      <HelloWorld />
+    </>
+  )
 }
 
-export default HelloWorld
+export default App
