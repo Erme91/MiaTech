@@ -1,24 +1,24 @@
 import { useState } from "react";
 
 const LoginForm = () => {
-    const [user, setUser] = useState ('');
-    const Username = (event) => {
-        setUser(event.target.user)
-        console.log("Username")
-    }
+    const [user, setUser] = useState ("");
+    const [pass, setPass] = useState ("");
 
-    const [pass, setPass] = useState ('');
-    const Password = (event) => {
-        setPass(event.target.pass)
-        console.log("Password")
+    const Submit = (event) => {
+        event.preventDefault()
+        alert(`Username: ${user} \n Password: ${pass}`)
     }
-
+    
     return (
         <>
-        <form action="">
-            <input type="text" name="user" value={user} onInput={Username}/>
-            <input type="text" name="pass" value={pass} onInput={Password}/>
+        <form onSubmit={Submit}>
+            <label>Username:</label>
+            <input type="text" name="user" value={user} onChange={(e) => setUser(e.target.value)}/>
+            <label>Password:</label>
+            <input type="text" name="pass" value={pass} onInput={(e) => setPass(e.target.value)}/>
         </form>
+        <br />
+        <button onClick={Submit}>Submit</button>
         </>
     )
 }
