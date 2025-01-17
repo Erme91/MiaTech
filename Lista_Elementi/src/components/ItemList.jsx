@@ -1,5 +1,4 @@
-function ItemList() {
-    const items = ["Computer", "Televisione", "Tablet", "Penna digitale", "Smartphone"];
+function ItemList({ items }) {
 
     return (
         <>
