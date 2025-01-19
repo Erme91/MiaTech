@@ -1,4 +1,5 @@
 import useFetch from "./hooks/useFetch";
+import TodoList from "./components/TodoList";
 
 const App = () => {
   const { data: posts, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
@@ -33,6 +34,9 @@ const App = () => {
           ))}
         </tbody>
       </table>
+      <div>
+      <TodoList />
+    </div>
     </>
   );
 };
