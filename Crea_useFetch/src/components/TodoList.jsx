@@ -7,7 +7,7 @@ const TodoList = () => {
     
     const [word, setWord] = useState("");
 
-    const filteredTodos = useFilteredTodos(data,word);
+    const filteredTodos = useMemo(() => useFilteredTodos(data, word), [data, word]);
 
     const handleSearch = useCallback((event) => {
         setWord(event.target.value)
