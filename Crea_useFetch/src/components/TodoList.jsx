@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import useFetch from "../hooks/useFetch";
 import useFilteredTodos from "../hooks/useFilteredTodos";
 
@@ -9,9 +9,9 @@ const TodoList = () => {
 
     const filteredTodos = useFilteredTodos(data,word);
 
-    const handleSearch = (event) => {
+    const handleSearch = useCallback((event) => {
         setWord(event.target.value)
-    }
+    }, [])
 
     if (loading) {
         return <p>Caricamento...</p>
