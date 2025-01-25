@@ -1,0 +1,7 @@
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    color: rgb(255, 0, 247);
+    font-size: x-large;
+}
