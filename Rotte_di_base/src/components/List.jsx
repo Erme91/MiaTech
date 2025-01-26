@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 const List = () => {
-    const [todos, setTodos] = useState([]); 
-    const [loading, setLoading] = useState(true); 
+    const [todos, setTodos] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const searchQuery = searchParams.get("search") || "";
 
     useEffect(() => {
         const fetchTodos = async () => {
@@ -19,12 +22,21 @@ const List = () => {
             } catch (err) {
                 setError(err.message);
             } finally {
-                setLoading(false); 
+                setLoading(false);
             }
         };
 
         fetchTodos();
-    }, []); 
+    }, []);
+
+    const filteredTodos = todos.filter((todo) => {
+        return todo.title.toLowerCase().includes(searchQuery.toLowerCase());
+    });
+
+    const handleSearchChange = (event) => {
+        const query = event.target.value;
+        setSearchParams({ search: query });
+    };
 
 
     if (loading) {
@@ -38,12 +50,18 @@ const List = () => {
     return (
         <div>
             <h1>Lista di To-Do</h1>
+            <input
+                type="text"
+                placeholder="Cerca un To-Do..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+            />
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
                         <Link to={`/todos/${todo.id}`}>
-                        <strong>{todo.completed ? "yes" : "not"} </strong>
-                        {todo.title}
+                            <strong>{todo.completed ? "yes" : "not"} </strong>
+                            {todo.title}
                         </Link>
                     </li>
                 ))}
