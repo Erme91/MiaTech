@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const List = () => {
     const [todos, setTodos] = useState([]); 
@@ -9,7 +10,7 @@ const List = () => {
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+                const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
                 if (!response.ok) {
                     throw new Error("Errore nel caricamento dei dati");
                 }
@@ -40,8 +41,10 @@ const List = () => {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
+                        <Link to={`/todos/${todo.id}`}>
                         <strong>{todo.completed ? "yes" : "not"} </strong>
                         {todo.title}
+                        </Link>
                     </li>
                 ))}
             </ul>
