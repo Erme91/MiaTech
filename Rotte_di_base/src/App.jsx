@@ -9,17 +9,6 @@ import List from './components/List';
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <nav>
-          <ul>
-            <li>
-              <Link to="">Home</Link>
-            </li>
-            <li>
-              <Link to="about">About</Link>
-            </li>
-          </ul>
-        </nav>
         <Routes>
           <Route path='/' element={<PublicLayout />}>
             <Route path='' element={<Home />} />
@@ -28,7 +17,6 @@ const App = () => {
             <Route path="list" element={<List />} />
           </Route>
         </Routes>
-      </BrowserRouter>
     </>
   )
 }

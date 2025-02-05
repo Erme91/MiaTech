@@ -1,5 +1,8 @@
 import useFetch from "./hooks/useFetch";
 import TodoList from "./components/TodoList";
+import { useContext } from "react";
+import { TodoContext } from "./components/TodoContext";
+import { TodoProvider } from "./components/TodoContext";
 
 const App = () => {
   const { data: posts, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
@@ -26,17 +29,19 @@ const App = () => {
         <tbody>
           {posts && posts.map(post => (
             <tr key={post.id}>
-                <td>{post.userId}</td>
-                <td>{post.id}</td>
-                <td>{post.title}</td>
-                <td>{post.body}</td>
+              <td>{post.userId}</td>
+              <td>{post.id}</td>
+              <td>{post.title}</td>
+              <td>{post.body}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <div>
-      <TodoList />
-    </div>
+        <TodoProvider>
+          <TodoList />
+        </TodoProvider>
+      </div>
     </>
   );
 };
