@@ -45,3 +45,15 @@ function error(message: string): never {
 }
 
 error("Attenzione, qualcosa è andato storto!");
+
+function parseInput(input: unknown) {
+    if(typeof input === "string") {
+        return `Il tipo di dato ${input} è una stringa`
+    } else if (typeof input === "number") {
+        return `Il tipo di dato è un numero, il ${input}` 
+    } else {
+        throw new Error (`Questo tipo di dato non è supportato (${typeof input})`)
+    }
+};
+
+(parseInput("Messaggio"))
