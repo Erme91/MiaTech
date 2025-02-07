@@ -28,7 +28,7 @@ function assignTodoToUser(todoId: number, userId: number): void {
 
 assignTodoToUser(1, 1);
 
-function getUserTodo(userId: number): Todo[] {
+function getUserTodos(userId: number): Todo[] {
     return todos.filter(todo => todo.userId === userId)
 }
 
@@ -38,4 +38,4 @@ assignTodoToUser(1, 5);
 addTodo("Fare una ricerca sull'Enciclopedia");
 assignTodoToUser(2, 5);
 
-getUserTodo(5)
+getUserTodos(5)
