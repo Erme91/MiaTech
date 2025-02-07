@@ -13,4 +13,17 @@ function addTodo(title: string): void {
     todos.push(newTodo)
 }
 
-addTodo("List")
+addTodo("List");
+
+function assignTodoToUser(todoId: number, userId: number): void {
+    const todo = todos.find(t => t.id === todoId)
+
+    if(!todo) {
+        console.log("Nessun todo trovato");
+        return
+    }
+    
+    todo.userId = userId
+}
+
+assignTodoToUser(1, 1)
