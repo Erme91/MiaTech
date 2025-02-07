@@ -22,8 +22,20 @@ function assignTodoToUser(todoId: number, userId: number): void {
         console.log("Nessun todo trovato");
         return
     }
-    
+
     todo.userId = userId
 }
 
-assignTodoToUser(1, 1)
+assignTodoToUser(1, 1);
+
+function getUserTodo(userId: number): Todo[] {
+    return todos.filter(todo => todo.userId === userId)
+}
+
+addTodo("Andare al supermercato");
+assignTodoToUser(1, 5);
+
+addTodo("Fare una ricerca sull'Enciclopedia");
+assignTodoToUser(2, 5);
+
+getUserTodo(5)
