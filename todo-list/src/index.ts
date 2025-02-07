@@ -38,4 +38,10 @@ assignTodoToUser(1, 5);
 addTodo("Fare una ricerca sull'Enciclopedia");
 assignTodoToUser(2, 5);
 
-getUserTodos(5)
+getUserTodos(5);
+
+function error(message: string): never {
+    throw new Error (message)
+}
+
+error("Attenzione, qualcosa è andato storto!");
