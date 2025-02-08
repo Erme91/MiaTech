@@ -67,3 +67,7 @@ function updateTodo (id: number, update: Partial<Todo>): void {
 }
 
 updateTodo(2, {title: "Funzioni"});
+
+function getTodoSummary(todo: Todo) : [string, boolean] {
+    return [todo.title, todo.completed]
+};
