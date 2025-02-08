@@ -4,13 +4,14 @@ const todos: Todo[] = [];
 
 let newId = 1;
 
-function addTodo(title: string, metadata?: any): void {
+function addTodo(title: string, metadata?: string | object): void {
     const newTodo: Todo = {
         id: newId++,
         title: title,
         completed: false,
-        metadata: metadata
+        metadata
     }
+
     todos.push(newTodo)
 }
 
