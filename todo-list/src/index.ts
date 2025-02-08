@@ -58,4 +58,12 @@ function parseInput(input: unknown) {
     }
 };
 
-(parseInput("Messaggio"))
+(parseInput("Messaggio"));
+
+function updateTodo (id: number, update: Partial<Todo>): void {
+    const todoId = todos.findIndex(todo => todo.id === id);
+
+    todos[todoId] = {...todos[todoId], ...update}
+}
+
+updateTodo(2, {title: "Funzioni"});
