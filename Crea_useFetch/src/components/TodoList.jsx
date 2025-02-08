@@ -1,27 +1,18 @@
 import React, { useEffect } from "react";
-import { useContext } from "react";
-import { TodoContext } from "./TodoContext";
+import { useMemo } from "react";
 
 const TodoList = () => {
-    const { todos } = useContext(TodoContext);
+    const filteredTodos = useMemo(() => {
+        return todos.filter(todo => todo.status === filter);
+    }, [todos, filter]);
 
     return (
-        <div>
-            <h1>Lista di To-Do</h1>
-            <ul>
-                {todos.length > 0 ? (
-                    todos.map((todo) => (
-                        <li key={todo.id}>
-                            <strong>{todo.completed ? "yes" : "no"} </strong>
-                            {todo.title}
-                        </li>
-                    ))
-                ) : (
-                    <p>Nessun to-do disponibile.</p>
-                )}
-            </ul>
-        </div>
+        <ul>
+            {filteredTodos.map(todo => (
+                <li key={todo.id}>{todo.title}</li>
+            ))}
+        </ul>
     );
-};
+}
 
 export default TodoList;
