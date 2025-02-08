@@ -1,73 +1,16 @@
-import { Todo } from "./types";
+import { Project, Todo, User } from "./types";
 
-const todos: Todo[] = [];
-
-let newId = 1;
-
-function addTodo(title: string, metadata?: string | object): void {
-    const newTodo: Todo = {
-        id: newId++,
-        title: title,
-        completed: false,
-        metadata
-    }
-
-    todos.push(newTodo)
+function createProject(id: number, name: string, users: User[], todos: Todo[]) : Project {
+    return {
+        id,
+        name,
+        users,
+        todos
+    };
 }
 
-addTodo("List");
+const users: User[] = [{ id: 1, name: "Carolina" }];
+const todos: Todo[] = [{ id: 1, title: "Terminare un dipinto", completed: true }];
 
-function assignTodoToUser(todoId: number, userId: number): void {
-    const todo = todos.find(t => t.id === todoId)
-
-    if(!todo) {
-        console.log("Nessun todo trovato");
-        return
-    }
-
-    todo.userId = userId
-}
-
-assignTodoToUser(1, 1);
-
-function getUserTodos(userId: number): Todo[] {
-    return todos.filter(todo => todo.userId === userId)
-}
-
-addTodo("Andare al supermercato");
-assignTodoToUser(1, 5);
-
-addTodo("Fare una ricerca sull'Enciclopedia");
-assignTodoToUser(2, 5);
-
-getUserTodos(5);
-
-function error(message: string): never {
-    throw new Error (message)
-}
-
-error("Attenzione, qualcosa è andato storto!");
-
-function parseInput(input: unknown) {
-    if(typeof input === "string") {
-        return `Il tipo di dato ${input} è una stringa`
-    } else if (typeof input === "number") {
-        return `Il tipo di dato è un numero, il ${input}` 
-    } else {
-        throw new Error (`Questo tipo di dato non è supportato (${typeof input})`)
-    }
-};
-
-(parseInput("Messaggio"));
-
-function updateTodo (id: number, update: Partial<Todo>): void {
-    const todoId = todos.findIndex(todo => todo.id === id);
-
-    todos[todoId] = {...todos[todoId], ...update}
-}
-
-updateTodo(2, {title: "Funzioni"});
-
-function getTodoSummary(todo: Todo) : [string, boolean] {
-    return [todo.title, todo.completed]
-};
+const project = createProject(1, "Quadri", users, todos);
+console.log(project);
