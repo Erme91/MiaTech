@@ -1,17 +1,32 @@
-import React, { useEffect } from "react";
-import { useMemo } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { completeTodo } from "../store/slices/todoReducer";
 
 const TodoList = () => {
-    const filteredTodos = useMemo(() => {
-        return todos.filter(todo => todo.status === filter);
-    }, [todos, filter]);
+    const todos = useSelector(state => state.todos);
+    const dispatch = useDispatch();
+
+    console.log("Stato Redux:", todos);
 
     return (
-        <ul>
-            {filteredTodos.map(todo => (
-                <li key={todo.id}>{todo.title}</li>
-            ))}
-        </ul>
+        <div>
+            <h2>To-Do List</h2>
+            <ul>
+                {Array.isArray(todos) && todos.map(todo => (
+                    <li key={todo.id} style={{ textDecoration: todo.completed ? "line-through" : "none" }}>
+                        <span>
+                            {todo.title}
+                        </span>
+                        <button
+                            onClick={() => dispatch(completeTodo(todo.id))}
+                            disabled={todo.completed}
+                        >
+                            Completa
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 

@@ -1,8 +1,8 @@
 import useFetch from "./hooks/useFetch";
 import TodoList from "./components/TodoList";
-import { useContext } from "react";
-import { TodoContext } from "./components/TodoContext";
-import { TodoProvider } from "./components/TodoContext";
+import { Provider } from "react-redux";
+import store from "./store/store";
+
 
 const App = () => {
   const { data: posts, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
@@ -38,9 +38,9 @@ const App = () => {
         </tbody>
       </table>
       <div>
-        <TodoProvider>
+        <Provider store={store}>
           <TodoList />
-        </TodoProvider>
+        </Provider>
       </div>
     </>
   );
