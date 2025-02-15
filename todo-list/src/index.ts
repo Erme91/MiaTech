@@ -1,16 +1,30 @@
-import { Project, Todo, User } from "./types";
+import { Todo, TodoStatus } from "./types";
 
-function createProject(id: number, name: string, users: User[], todos: Todo[]) : Project {
-    return {
-        id,
-        name,
-        users,
-        todos
-    };
+const todos: Todo[] = []
+
+let newId = 1;
+
+function addTodo(title: string): void {
+    const newTodo: Todo = {
+        id: newId++,
+        title,
+        completed: false,
+        status: TodoStatus.Pending
+    }
+
+    todos.push(newTodo)
 }
 
-const users: User[] = [{ id: 1, name: "Carolina" }];
-const todos: Todo[] = [{ id: 1, title: "Terminare un dipinto", completed: true }];
+addTodo("Added new Todo");
 
-const project = createProject(1, "Quadri", users, todos);
-console.log(project);
+function updateTodoStatus(todoId: number, status: TodoStatus) : void {
+    const todo= todos.find(t => t.id === todoId)
+
+    if(todo) {
+        todo.status = status
+    } else {
+        console.log("Nessun todo trovato")
+    }
+}
+
+updateTodoStatus(1, TodoStatus.Completed)
