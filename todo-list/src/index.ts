@@ -1,4 +1,5 @@
-import { Todo, TodoStatus } from "./types";
+import { Todo, TodoStatus, TodoRecord } from "./types";
+import { convertArrayToRecord } from "./utils";
 
 class User {
     id: number;
@@ -40,3 +41,13 @@ function updateTodoStatus(todoId: number, status: TodoStatus): void {
         console.log("Nessun todo trovato");
     }
 }
+
+const newTodos: Todo[] = [
+    { id: 1, title: "Organizzare il viaggio", completed: false, status: TodoStatus.Pending },
+    { id: 2, title: "Preparare la cena", completed: false, status: TodoStatus.InProgress },
+    { id: 3, title: "Sistemare i DVD", completed: true, status: TodoStatus.Completed },
+];
+
+const todoRecord: TodoRecord = convertArrayToRecord(newTodos);
+
+console.log(todoRecord);

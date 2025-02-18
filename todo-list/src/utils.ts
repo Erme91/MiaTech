@@ -1,4 +1,4 @@
-import { Todo, PartialTodo, TodoStatus } from "./types";
+import { Todo, PartialTodo, TodoStatus, TodoRecord } from "./types";
 
 let todos: Todo[] = [
     { id: 1, title: "Andare in biblioteca", completed: false, status: TodoStatus.Pending },
@@ -18,4 +18,11 @@ export function updatePartialTodo(todoId: number, updatedTodo: PartialTodo): voi
     } else {
         console.log("Nessun todo presente");
     }
+}
+
+export function convertArrayToRecord(todos: Todo[]): TodoRecord {
+    return todos.reduce((record, todo) => {
+        record[todo.id] = todo;
+        return record;
+    }, {} as TodoRecord);
 }

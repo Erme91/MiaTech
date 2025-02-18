@@ -25,3 +25,5 @@ export enum TodoStatus {
 }
 
 export type PartialTodo = Partial<Todo>;
+
+export type TodoRecord = Record<number, Todo>;
