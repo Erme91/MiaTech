@@ -19,6 +19,10 @@ class User {
     }
 }
 
+const user1 = new User(1, "Renato", "renato@hotmail.com");
+const user2 = new User(2, "Priscilla", "pri@gmail.com");
+const user3 = new User(3, "Matteo", "matti@alice.it");
+
 const todos: Todo[] = [];
 let newId = 1;
 
@@ -31,6 +35,10 @@ function addTodoToUser(user: User, title: string): void {
     };
     user.addTodo(newTodo);
 }
+
+addTodoToUser(user1, "Andare in campagna");
+addTodoToUser(user2, "Prenotare l'hotel");
+addTodoToUser(user3, "Riparare l'auto");
 
 function updateTodoStatus(todoId: number, status: TodoStatus): void {
     const todo = todos.find(t => t.id === todoId);
